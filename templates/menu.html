@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Ambar</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<style>
+  .hero-section {
+    height: 500px;
+    background-image: url('https://i.pinimg.com/1200x/2b/b8/a1/2bb8a179ca78c4848a65dcccc0c51b1c.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-section .container {
+    position: relative;
+    z-index: 2;
+  }
+</style>
+
+<body class="cuerpo">
+  {% include "_navbar.html" %}
+  <section class="hero-section d-flex align-items-center text-center text-white">
+
+    <div class="container ">
+      <h1 class="display-4 fw-bold">
+        Nuestro menu
+      </h1>
+    </div>
+  </section>
+ <section class="bg- cafe py-5">
+
+    <div class="container">
+
+      {% include "_menu_tabs.html" %}
+    <div class="text-center text-white m-5 "><h3 class="fw-bold">Carnes</h3></div>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/66/6b/13/666b13702e672c8a6e4cbbe75d8a5fb2.jpg" 
+            class="card-img-top" 
+            alt="Filete Mignon a la Pimienta Negra"
+            height="225"
+          >
+          <div class="card-body text-center">
+            <p class="card-text">
+              Filete Mignon a la Pimienta Negra
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Filete Mignon a la Pimienta Negra">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/f0/da/1a/f0da1aa53e7c28ffaf0c6402675a5c1f.jpg" 
+            class="card-img-top" 
+            alt="Solomillo de Cerdo con Salsa de Mango y Chile"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Solomillo de Cerdo con Salsa de Mango y Chile
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Solomillo de Cerdo con Salsa de Mango y Chile">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/05/ae/6b/05ae6bdc3499cc30cb2f63cc38c4cf51.jpg" 
+            class="card-img-top" 
+            alt="Steak Tartar ClÃ¡sico"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Steak Tartar ClÃ¡sico
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Steak Tartar Cl&#195;&#161;sico">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="text-center text-white m-5"><h3 class="fw-bold">Italiana</h3></div>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/71/4b/9d/714b9d8cab58045d1696617303dcfc45.jpg" 
+            class="card-img-top" 
+            alt="LasaÃ±a"
+            height="225"
+          >
+          <div class="card-body text-center">
+            <p class="card-text">
+              LasaÃ±a
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Lasa&#195;&#177;a">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/bd/df/aa/bddfaaa91499a37a87b334427758dc71.jpg" 
+            class="card-img-top" 
+            alt="Spaghetti alla Carbonara"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Spaghetti alla Carbonara
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Spaghetti alla Carbonara">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/e8/22/52/e82252337651a9d96889afddc9f70765.jpg" 
+            class="card-img-top" 
+            alt="Focaccia "
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Focaccia
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Focaccia">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+  <div class="container">
+    <div class="text-center text-white m-5"><h3></h3></div>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/236x/46/45/86/464586b18298331fa418b4abbb17a9a2.jpg" 
+            class="card-img-top" 
+            alt="pizza cuatro estaciones"
+            height="225"
+          >
+          <div class="card-body text-center">
+            <p class="card-text">
+              pizza cuatro estaciones
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="pizza cuatro estaciones">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/0f/2d/6b/0f2d6b352a972b319d82d5557b88fdc0.jpg" 
+            class="card-img-top" 
+            alt="Classic Margherita Pizza"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Classic Margherita Pizza
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Classic Margherita Pizza">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/a4/75/76/a47576547937c7d1838cec6684a0c29e.jpg" 
+            class="card-img-top" 
+            alt="Pizza Cottage Cheese"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Pizza Cottage Cheese
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Pizza Cottage Cheese">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="container">
+    <div class="text-center text-white m-5"><h3 class="fw-bold">Mexicana</h3></div>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/5d/84/8a/5d848af6cd8431fb07014453f2f4fd43.jpg" 
+            class="card-img-top" 
+            alt="pollo en mole y arroz"
+            height="225"
+          >
+          <div class="card-body text-center">
+            <p class="card-text">
+              Pollo en mole y arroz
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Pollo en mole y arroz">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/93/f4/29/93f429bc6c25a9c6af32568bb61d2f00.jpg" 
+            class="card-img-top" 
+            alt="sopes"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Sopes
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Sopes">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/60/d5/a0/60d5a0c08041642848dfe0b46e74b8e0.jpg" 
+            class="card-img-top" 
+            alt="enchiladas salsa roja"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Enchiladas salsa roja
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Enchiladas salsa roja">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="container">
+    <div class="text-center text-white m-5"><h3></h3></div>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/9b/80/be/9b80be849285c9c8284d271c79d55e92.jpg" 
+            class="card-img-top" 
+            alt="tamles"
+            height="225"
+          >
+          <div class="card-body text-center">
+            <p class="card-text">
+              Tamales
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Tamales">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/83/2c/9e/832c9ee620a6d39a8a9ed0f3b91eb608.jpg" 
+            class="card-img-top" 
+            alt="empanadas"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Empanadas
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Empanadas">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/0b/21/69/0b21693ed572f38fd32e366ea1970acd.jpg" 
+            class="card-img-top" 
+            alt="pozole"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Pozole
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Pozole">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+  <div class="container">
+    <div class="text-center text-white m-5"><h3 class="fw-bold">Saludable</h3></div>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/20/b6/4c/20b64c30bb2553b5b5626eebda7e53a7.jpg" 
+            class="card-img-top" 
+            alt="Pechuga de pollo a la plancha con arroz y ensalada"
+            height="225"
+          >
+          <div class="card-body text-center">
+            <p class="card-text">
+              Pechuga de pollo a la plancha con arroz y ensalada
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Pechuga de pollo a la plancha con arroz y ensalada">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/41/8a/36/418a36cfd174b99c34caf1f85dbb4489.jpg" 
+            class="card-img-top" 
+            alt="ensalada de atun"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Ensalada de atun
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Ensalada de atun">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/1b/6a/f5/1b6af59e675dc3c55a382f6e545d21e4.jpg" 
+            class="card-img-top" 
+            alt="ensalada de champiÃ±ones"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Ensalada de champiÃ±ones
+            </p>
+            <form method="post" action="{{ url_for('agregar_a_orden') }}">
+              <input type="hidden" name="nombre" value="Ensalada de champi&#195;&#177;ones">
+              <input type="hidden" name="precio" value="50">
+              <input type="hidden" name="volver" value="{{ request.path }}">
+              <button type="submit" class="btn btn-gris-degradado">
+                Agregar
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+</section>
+{% include "_orden_resumen.html" %}
+{% include "_footer.html" %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>

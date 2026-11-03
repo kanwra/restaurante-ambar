@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comida a domicilio - Ambar</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="min-vh-100 d-flex flex-column"
+  style="background-image: url('{{ url_for('static', filename='img/dime.jpg') }}'); background-size: cover; background-position: center;">
+  {% include "_navbar.html" %}
+
+  <main class="container my-5 flex-grow-1">
+    <section class="card shadow p-4 text-center">
+      <h1 class="fw-bold mb-3">Pide tu comida a domicilio aqui</h1>
+      <p class="mb-4">Revisa el menu y elige tus platillos favoritos.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+        <a href="{{ url_for('menu') }}" class="btn btn-primary">Ver menu</a>
+        <a href="{{ url_for('orden') }}" class="btn btn-danger">Ver mi orden</a>
+        <a href="{{ url_for('mostrar_reservas') }}" class="btn btn-outline-secondary">Reservar mesa</a>
+      </div>
+    </section>
+  </main>
+
+  {% include "_footer.html" %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>

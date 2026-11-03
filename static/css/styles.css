@@ -1,0 +1,98 @@
+.cuerpo{
+    background-color: #000000;;
+}
+
+.cafe{
+    background-color: #330909;
+}
+
+.navbar{
+            background-color: #530e0e;
+}
+
+.text-1{
+    color: #fee382;
+}
+
+.cafe2{
+    background-color: #3e1e15;
+}
+
+.navbar-brand-ambar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card-body1{
+    background-color: #5f4d36;
+}
+
+.card-body2{
+    background-color: #F3E3D0;
+}
+
+.logo-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.2rem;
+    letter-spacing: 8px;
+    color: #681515;
+    margin: 0;
+    text-transform: uppercase;
+    }
+
+
+
+.btn-gris-degradado{
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #444646, #717d7e);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+textarea{
+    resize: none;
+    height: 80px;
+}
+
+.orden{
+    color: #90ccd6;
+    width: 100%;
+    padding: 20px;
+    font-size: 22px;
+}
+
+.Titu{
+    color: #421212;
+}
+.comi{
+    background-color: rgb(126, 86, 86);
+}
+
+.orden-flotante {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: min(320px, calc(100% - 36px));
+    max-height: 420px;
+    overflow: auto;
+    z-index: 20;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.precio-menu {
+    color: #530e0e;
+}
+
+
+

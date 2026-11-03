@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bebidas - Ambar</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<style>
+  .hero-section {
+    height: 500px;
+    background-image: url('https://i.pinimg.com/1200x/2b/b8/a1/2bb8a179ca78c4848a65dcccc0c51b1c.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-section .container {
+    position: relative;
+    z-index: 2;
+  }
+</style>
+
+<body class="cuerpo">
+  {% include "_navbar.html" %}
+  <section class="hero-section d-flex align-items-center text-center text-white">
+
+    <div class="container">
+      <h1 class="display-4 fw-bold">
+        Nuestro menu
+      </h1>
+    </div>
+  </section>
+ <section class="cafe py-5">
+
+    <div class="container">
+
+      {% include "_menu_tabs.html" %}
+    <div class="text-center text-white m-5 "><h3 class="fw-bold">Jarras de aguas naturales</h3></div>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/47/8b/e5/478be5be1592b5a612dbb1c7881ad4a9.jpg" 
+            class="card-img-top" 
+            alt="jamaica"
+            height="225"
+          >
+          <div class="card-body text-center">
+            <p class="card-text">
+              jamaica
+            </p>
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/81/5b/53/815b53180398ffd26155121aab6f9ab7.jpg" 
+            class="card-img-top" 
+            alt="Horchata"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Horchata
+            </p>
+
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/54/1b/53/541b53618a06065f1b119f613d7125b3.jpg" 
+            class="limonada" 
+            alt="Steak Tartar Clásico"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              limonada
+            </p>
+
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="text-center text-white m-5"><h3 class="fw-bold">Malteadas</h3></div>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/b3/12/04/b312040ce12ba0e8cc279c25c711378f.jpg" 
+            class="card-img-top" 
+            alt="Fresa"
+            height="225"
+          >
+          <div class="card-body text-center">
+            <p class="card-text">
+              malteada de fresa
+            </p>
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/96/8c/35/968c3571d5d3996901392d67ebc30a6a.jpg" 
+            class="card-img-top" 
+            alt="Malteda de vainilla"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Malteada de vainilla
+            </p>
+
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/39/fd/aa/39fdaaa22e02d6945689fd97c419bbea.jpg" 
+            class="card-img-top" 
+            alt="malteada de chocolate "
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              malteada de chocolate 
+            </p>
+
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+  <div class="container">
+    <div class="text-center text-white m-5"><h3></h3></div>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/93/8e/c0/938ec08281715b1337a7b6284c4b6d4c.jpg" 
+            class="card-img-top" 
+            alt="malteada de galleta"
+            height="225"
+          >
+          <div class="card-body text-center">
+            <p class="card-text">
+              malteada de galleta
+            </p>
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/e2/75/55/e27555a2c08ce3464077e3c22c6ce68e.jpg" 
+            class="card-img-top" 
+            alt="malteada de caramelo"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              malteada de caramelo
+            </p>
+
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/1200x/52/26/74/522674155dcb0e4a38499e3569372475.jpg" 
+            class="card-img-top" 
+            alt="Malteada de mango"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              malteada de mango
+            </p>
+
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="container">
+    <div class="text-center text-white m-5"><h3 class="fw-bold">Saludable</h3></div>
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/81/68/b6/8168b6f71a64c4bd2dba556df2c053f0.jpg" 
+            class="card-img-top" 
+            alt="Agua mineral"
+            height="225"
+          >
+          <div class="card-body text-center">
+            <p class="card-text">
+              Agua Mineral
+            </p>
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/44/e7/3d/44e73d21e52c5e5a73325abfd5f08679.jpg" 
+            class="card-img-top" 
+            alt="agua "
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Agua
+            </p>
+
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+
+          <img 
+            src="https://i.pinimg.com/736x/9c/7b/88/9c7b880fd06cf9a1b350b0521ddfe2e6.jpg" 
+            class="card-img-top" 
+            alt="Jugo verde"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Jugo Verde
+            </p>
+
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+                <img 
+            src="https://i.pinimg.com/736x/24/ce/7b/24ce7bd679766e49b161f8b5fc4649a1.jpg" 
+            class="card-img-top" 
+            alt="leche vegetable"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Leche de Almendras
+            </p>
+
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <img 
+            src="https://i.pinimg.com/1200x/2a/64/fa/2a64fa41206bdbc7465c6b6ba4c63cdf.jpg" 
+            class="card-img-top" 
+            alt="Agua Saborizada"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Aguas Saborizadas
+            </p>
+
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+      
+            <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <img 
+            src="https://i.pinimg.com/1200x/69/65/bb/6965bb6aa455064ce248cb87fa6ba91a.jpg" 
+            class="card-img-top" 
+            alt="smoothie de avena y plátano"
+            height="225"
+          >
+
+          <div class="card-body text-center">
+
+            <p class="card-text">
+              Smoothie de Avena y Plátano
+            </p>
+
+            <button class="btn btn-gris-degradado">
+              Agregar
+            </button>
+
+          </div>
+        </div>
+      </div>
+</section>
+{% include "_orden_resumen.html" %}
+{% include "_footer.html" %}
+<script src="{{ url_for('static', filename='js/menu_orden.js') }}"></script>
+</body>
+
+</html>
